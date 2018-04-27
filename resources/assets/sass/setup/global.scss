@@ -1,0 +1,83 @@
+@mixin breadcrumb ($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+}
+
+body {
+  font-family: Lora, Lato, sans-serif;
+  color: $body-color;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arvo, sans-serif;
+}
+.block-elm {
+  display: block;
+}
+.edl-breadcrumb {
+  display: block;
+  padding: 10px 20px;
+  font-size: .92em;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.edl-breadcrumb-primary {
+  @include breadcrumb($primary-color, #fff);
+}
+.edl-breadcrumb-secondary {
+  @include breadcrumb($secondary-color, #fff);
+}
+.edl-breadcrumb-gray {
+  @include breadcrumb(#ECF0F1, $mid-gray);
+}
+
+@mixin eld-notification ($color) {
+  border-color: darken($color, 10%);
+  background-color: lighten($color, 10%);
+  color: #fff;
+
+  & p > i {
+    color: darken($color, 15%);
+  }
+}
+
+.edl-notification {
+  display: block;
+  padding: 6px 15px;
+  border-radius: 5px;
+  border: 1px solid;
+
+  & p > i {
+    font-size: 1.5em;
+    margin-right: 8px;
+  }
+}
+.edl-notification-primary {
+  @include eld-notification($primary-color);
+}
+.edl-notification-sec {
+  @include eld-notification($secondary-color);
+}
+
+//Text Colors
+text-primary {
+  color: $primary-color;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+.mark {
+  font-weight: bolder;
+  margin: 0 2px;
+  color: $primary-color;
+  background-color: transparent;
+}
+
+//Inputs and Textfields
+.textfield {
+  border: 1px solid;
+  padding: 8px;
+  font-family: Lora, Lato, sans-serif;
+  display: block;
+  width: 100%;
+  outline: none;
+}

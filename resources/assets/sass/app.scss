@@ -1,0 +1,12 @@
+// Defined Variables dependency needed by all Component
+//Imports
+@import "variables";
+@import "mixins";
+
+
+@import "setup/setup";
+
+//Custom components Import
+@import "components/input";
+@import "components/button";
+@import "components/navbar";

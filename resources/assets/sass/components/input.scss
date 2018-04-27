@@ -1,0 +1,34 @@
+@mixin input($color, $transition){
+  border-color: $color;
+  @include transition(border-color, .6s, $transition);
+
+  &:focus, &:active {
+    border-color: darken($color, 20%);
+    color: $color;
+    font-weight: bold;
+    @include transition(border-color, .5s, linear);
+  }
+}
+
+.edl-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid;
+  font-family: Lora, Lato, sans-serif;
+  font-size: .95em;
+  outline: none;
+  padding: 5px 8px;
+}
+
+.input-rad {
+  border-radius: 3px;
+}
+.input-brd-primary {
+  @include input($primary-color, ease-in-out);
+}
+.input-brd-sec {
+  @include input($secondary-color, ease-in);
+}
+.input-brd-gray {
+  @include input($mid-gray, ease-in-out);
+}

@@ -1,0 +1,29 @@
+@import "../variables";
+
+body {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  width: 400px;
+  background-color: $white-color;
+  border-radius: 5px;
+  padding: 60px 15px 60px 20px;
+  text-align: center;
+}
+
+.login-logo {
+  font-size: 4em;
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 22px 8px 6px 15px;
+  border-radius: 50%;
+}
+
+//For Notification Modules of React
+.notification-container {
+  text-align: left;
+}

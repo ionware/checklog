@@ -1,0 +1,40 @@
+//Button template mixin
+@mixin button($bg-color, $transition) {
+  background-color: $bg-color;
+  color: #fff;
+  @include transition(background-color, .4s, $transition);
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    @include transition(background-color, .4s, linear);
+  }
+}
+
+.button {
+  height: 40px;
+  font-size: .85em;
+  font-family: Avro, sans-serif;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  outline: none;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+.btn-rad {
+  @include border-radius(3px);
+}
+
+.btn-primary {
+  @include button($primary-color, linear);
+}
+
+.btn-secondary {
+  @include button($secondary-color, ease-in-out);
+}
+.btn-grap {
+  @include button($light-gray, ease-in-out);
+}

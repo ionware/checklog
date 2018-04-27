@@ -1,0 +1,28 @@
+.question {
+  display: inline-block;
+  width: 60%;
+  position: absolute;
+  left: 0;
+}
+.question-preview {
+  display: inline-block;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  font-family: Lato, Lora, sans-serif;
+  background-color: #ECF0F1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px 10px;
+
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    color: $dark-gray;
+    text-transform: uppercase;
+    font-size: 1.08em;
+  }
+}
+.question-btn-submit {
+  width: 150px;
+  float: right;
+}

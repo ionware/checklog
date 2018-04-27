@@ -1,0 +1,22 @@
+.avater-big {
+  width: 90px;
+  height: 90px;
+  margin: 0 5px;
+  background-color: $white-color;
+  padding: 10px;
+  border-radius: 50%;
+}
+.avater-preview {
+  width: 65px;
+  height: 65px;
+  margin: 2px 8px;
+  background-color: $white-color;
+  padding: 6px;
+  border-radius: 50%;
+  @include transition(border, .5s, linear);
+
+  &:hover {
+    border: 1px solid $light-gray;
+    @include transition(border, .4s, ease-in-out);
+  }
+}

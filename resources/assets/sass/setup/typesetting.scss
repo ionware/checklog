@@ -1,0 +1,105 @@
+
+//Padding all-sides of the container applied
+.pad-all-1x {
+  @include padding(5px, 5px, 5px, 5px);
+}
+.pad-all-2x {
+  @include padding(10px, 10px, 10px, 10px);
+}
+.pad-all-3x {
+  @include padding(15px, 15px, 15px, 15px);
+}
+.pad-all-4x {
+  @include padding(20px, 20px, 20px, 20px);
+}
+
+//Padding just Right-and-Left side of the container only
+.pad-rl-1x{
+  @include padding(0, 5px, 0, 5px);
+}
+.pad-rl-2x{
+  @include padding(0, 10px, 0, 10px);
+}
+.pad-rl-3x{
+  @include padding(0, 15px, 0, 15px);
+}
+.pad-rl-4x {
+  @include padding(0, 20px, 0, 20px);
+}
+
+//Pads the Top-and-Bottom of the Container applied
+.pad-tb-1x{
+  @include padding(5px, 0, 5px, 0);
+}
+.pad-tb-2x{
+  @include padding(10px, 0, 10px, 0);
+}
+.pad-tb-3x{
+  @include padding(15px, 0, 15px, 0);
+}
+.pad-tb-4x{
+  @include padding(20px, 0, 20px, 0);
+}
+
+//Margin applies to all sides of the Container
+.margin-all-1x {
+  @include margin(5px, 5px, 5px, 5px);
+}
+.margin-all-2x{
+  @include margin(10px, 10px, 10px, 10px);
+}
+.margin-all-3x{
+  @include margin(15px, 15px, 15px, 15px);
+}
+.margin-all-4x{
+  @include margin(20px, 20px, 20px, 20px);
+}
+
+//Margin declaration applies to Right-and-Left Side
+.margin-rl-1x{
+  @include margin(0, 5px, 0, 5px);
+}
+.margin-rl-2x{
+  @include margin(0, 10px, 0, 10px);
+}
+.margin-rl-3x{
+  @include margin(0, 15px, 0, 15px);
+}
+.margin-rl-4x{
+  @include margin(0, 20px, 0, 20px);
+}
+
+//Margin applies to the Top-and-Bottom of the Container applied to
+.margin-tb-1x{
+  @include margin(5px, 0, 5px, 0);
+}
+.margin-tb-2x{
+  @include margin(10px, 0, 10px, 0);
+}
+.margin-tb-3x{
+  @include margin(15px, 0, 15px, 0);
+}
+.margin-tb-4x{
+  @include margin(20px, 0, 20px, 0);
+}
+
+//Containers Border Radius
+.rad-1x{
+  @include border-radius(5px);
+}
+.rad-2x{
+  @include border-radius(10px);
+}
+.rad-3x{
+  @include border-radius(15px);
+}
+.rad-4x{
+  @include border-radius(20px);
+}
+
+.small-1x {
+  font-size: .95em;
+}
+.small-2x {
+  font-size: .82em;
+}

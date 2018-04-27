@@ -1,0 +1,54 @@
+@import "../variables";
+@import "../mixins";
+@import "../components/react-select";
+.main-frame {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.form-frame {
+  width: 60%;
+  height: 100%;
+  display: inline-block;
+  padding: 15px 15px 0 15px;
+  overflow-y: scroll;
+}
+.display-frame {
+  width: 40%;
+  padding: 10px 20px;
+  display: inline-block;
+  height: 100%;
+  float: right;
+  background-color: darken($white-color, 1%);
+}
+.divider {
+  width: 100%;
+  padding: 5px 0;
+  margin: 6px 0;
+  border-bottom: 1px solid $light-gray;
+}
+.divider-2 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid $light-gray;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: darken($mid-gray, 30%);
+  margin: 3px; padding: 0;
+
+  & .title-icon {
+    font-size: 1.6em;
+    color: $primary-color;
+    margin-right: 3px;
+  }
+}
+.info-field {
+  margin: 8px 0;
+}
+.info {
+  display: block;
+}
+.custom-dropdown {
+  width: 100%;
+}

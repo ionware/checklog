@@ -1,0 +1,12 @@
+// Basic Colors
+$primary-color: #66BFBF !default;
+$secondary-color: #F76B8A !default;
+$white-color: #FCFEFE !default;
+$blue-white: #EAF6F6 !default;
+$mid-gray: #95A5A5 !default;
+$light-gray: #BDC3C7;
+$dark-gray: #2C3E50 !default;
+
+
+//Document body color
+$body-color: darken($mid-gray, 14%);

@@ -1,0 +1,20 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin padding($top, $bottom, $right, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin margin($top, $bottom, $right, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin transition($prop, $timing, $animation) {
+  -webkit-transition: $prop $timing $animation;
+  -moz-transition: $prop $timing $animation;
+  -o-transition: $prop $timing $animation;
+  transition: $prop $timing $animation;
+}
