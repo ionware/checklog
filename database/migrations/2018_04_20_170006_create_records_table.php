@@ -18,14 +18,14 @@ class CreateRecordsTable extends Migration
             $table->string('surname');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('fullname');
+            $table->string('fullname')->nullable();
             $table->string('dob');
             $table->string('gender');
             $table->string('marital_status')->nullable();
-            $table->string('state_birth');
-            $table->string('state_origin');
+            $table->string('state_birth')->nullable();
+            $table->string('state_origin')->nullable();
             $table->string('maiden_name')->nullable();
-            $table->string('kin_name');
+            $table->string('kin_name')->nullable();
             $table->string('kin_relationship')->nullable();
             $table->string('kin_telephone')->nullable();
             $table->string('profession')->nullable();
@@ -33,6 +33,7 @@ class CreateRecordsTable extends Migration
             $table->string('telephone_2')->nullable();
             $table->string('contact_address')->nullable();
             $table->string('home_address')->nullable();
+            $table->string("image_url")->nullable();
             $table->timestamps();
         });
     }

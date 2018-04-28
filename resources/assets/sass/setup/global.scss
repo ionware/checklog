@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //Text Colors
-text-primary {
+.text-primary {
   color: $primary-color;
 }
 .text-secondary {
@@ -80,4 +80,23 @@ text-primary {
   display: block;
   width: 100%;
   outline: none;
+}
+
+.divider {
+  border-bottom: 1px solid $light-gray;
+}
+.patient-avater {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+.data {
+  font-size: 1.1em;
+  & label {
+    color: $primary-color;
+    display:block;
+  }
+  & span {
+    color: $mid-gray;
+  }
 }

@@ -34,15 +34,7 @@ axios.interceptors.response.use((response) => response.data );
  * */
 export const loginRequest = data => axios.post("/login", data);
 
-export const getUserDetailsRequest = () => axios.get('/me');
-
-export const uploadQuestionRequest = (data) => axios.post('/question/create', data);
-
-export const createAccountRequest = (data) => axios.post('/account', data);
-
-export const submitFileRequest = (data) => axios.post('/question', data, {
-    headers: { "content-type": "multipart/form-data" }
-});
+export const createRecordRequest = data => axios.post("/patient", data);
 
 export const updateSettingsRequest = (data) => axios.put('/settings', data);
 

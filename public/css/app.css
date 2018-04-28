@@ -71,7 +71,7 @@ h6 {
   color: #f32251;
 }
 
-text-primary {
+.text-primary {
   color: #66BFBF;
 }
 
@@ -93,6 +93,29 @@ text-primary {
   display: block;
   width: 100%;
   outline: none;
+}
+
+.divider {
+  border-bottom: 1px solid #BDC3C7;
+}
+
+.patient-avater {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.data {
+  font-size: 1.1em;
+}
+
+.data label {
+  color: #66BFBF;
+  display: block;
+}
+
+.data span {
+  color: #95A5A5;
 }
 
 .pad-all-1x {
