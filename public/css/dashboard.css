@@ -572,3 +572,11 @@
   width: 100%;
 }
 
+.settings {
+  width: 500px;
+  padding: 30px 10px;
+  margin: 40px auto 0 auto;
+  border: 1px solid #BDC3C7;
+  border-radius: 3px;
+}
+

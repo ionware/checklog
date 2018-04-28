@@ -19,6 +19,16 @@ Route::group(['middleware' => ["web", "auth"]], function () {
 
     Route::get('/home', 'UserController@index')->name('home');
 
+    Route::get('/settings', 'UserController@setting');
+
+    Route::post('/settings', 'UserController@update');
+
+    Route::get('settings/account', function () {
+        return view('admin.account');
+    });
+
+    Route::post('/settings/account', 'UserController@create');
+
     Route::get('/patient/search', 'PatientsController@search');
 
     Route::get('/patient/{id}/checkin', 'CheckInController@show');

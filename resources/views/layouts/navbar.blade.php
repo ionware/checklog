@@ -23,6 +23,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">Home</a></li>
                 <li><a href="/settings">Settings</a></li>
+                <li><a href="/settings/account">Create account</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
