@@ -6,24 +6,23 @@ const formatString = (string) => {
 };
 
 
-const Info = ({ label, value }) => {
+const Info = ({ label, value, col }) => {
+    let data;
+    if (typeof value === 'object')
+        data = value.value;
+    else
+        data = value;
     return (
-        <div className="col-xs-4 info-field">
+        <div className={`col-xs-${col} info-field`}>
             <label>{formatString(label)}</label>
-            <span className="info">{ value || "------------------------"}</span>
+            <span className="info">{ data || "--------------------"}</span>
         </div>
     );
 };
 
 
-const DisplayFrame = ({ bioData }) => {
+const DisplayFrame = ({ bioData, onSubmit }) => {
     const objectKeys = Object.keys(bioData);
-    const Information = objectKeys.map((element, index) => {
-        if (typeof bioData[element] === 'object')
-            return (<Info label={element} value={bioData[element].value} key={index}/>);
-
-        return (<Info label={element} value={bioData[element]} key={index}/>);
-    });
     return (
         <div className="display-frame">
             <div className="container-fluid">
@@ -32,8 +31,39 @@ const DisplayFrame = ({ bioData }) => {
                         Preview Record
                     </h3>
                 </div>
+                <div className="row">
+                    <div className="col-xs-4 pull-right">
+                        <button className="button btn-block btn-primary btn-rad" onClick={onSubmit}>Add Record</button>
+                    </div>
+                </div>
                 <div className="row-pad-all-3x" style={{ marginTop: '20px'}}>
-                    { Information }
+                    <Info label={"Surname"} col={4} value={bioData.surname} />
+                    <Info label={"Firstname"} col={4} value={bioData.firstname} />
+                    <Info label={"Lastname"} col={4} value={bioData.lastname} />
+                </div>
+                <div className="row pad-all-3x">
+                    <Info label={"Home Address"} col={6} value={bioData.home_address} />
+                    <Info label={"Contact Address"} col={6} value={bioData.contact_address} />
+                </div>
+                <div className="row pad-all-3x">
+                    <Info label={"Date of Birth"} col={4} value={bioData.dob} />
+                    <Info label={"Gender"} col={4} value={bioData.gender} />
+                    <Info label={"Marital Status"} col={4} value={bioData.marital_status} />
+                </div>
+                <div className="row pad-all-3x">
+                    <Info label={"Telephone 1"} col={4} value={bioData.telephone_1} />
+                    <Info label={"Telephone 2"} col={4} value={bioData.telephone_2} />
+                    <Info label={"Profession"} col={4} value={bioData.profession} />
+                </div>
+                <div className="row pad-all-3x">
+                    <Info label={"State of Origin"} col={4} value={bioData.state_origin} />
+                    <Info label={"State of Birth"} col={4} value={bioData.state_birth} />
+                    <Info label={"Maiden name"} col={4} value={bioData.maiden_name} />
+                </div>
+                <div className="row pad-all-3x">
+                    <Info label={"Next of Kin"} col={5} value={bioData.kin_name} />
+                    <Info label={"Relationship"} col={3} value={bioData.kin_relationship} />
+                    <Info label={"Kin's Telephone"} col={4} value={bioData.kin_telephone} />
                 </div>
             </div>
         </div>

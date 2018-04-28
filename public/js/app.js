@@ -6833,7 +6833,9 @@ var App = function (_Component) {
                     onChange: this.onInputChange,
                     bioData: this.state,
                     onSubmit: this.onFormSubmit }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_DisplayFrame__["a" /* default */], { bioData: this.state })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_DisplayFrame__["a" /* default */], { bioData: this.state,
+                    onSubmit: this.onFormSubmit
+                })
             );
         }
     }]);
@@ -27195,11 +27197,14 @@ var formatString = function formatString(string) {
 
 var Info = function Info(_ref) {
     var label = _ref.label,
-        value = _ref.value;
+        value = _ref.value,
+        col = _ref.col;
 
+    var data = void 0;
+    if ((typeof value === "undefined" ? "undefined" : _typeof(value)) === 'object') data = value.value;else data = value;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "col-xs-4 info-field" },
+        { className: "col-xs-" + col + " info-field" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "label",
             null,
@@ -27208,20 +27213,16 @@ var Info = function Info(_ref) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "span",
             { className: "info" },
-            value || "------------------------"
+            data || "--------------------"
         )
     );
 };
 
 var DisplayFrame = function DisplayFrame(_ref2) {
-    var bioData = _ref2.bioData;
+    var bioData = _ref2.bioData,
+        onSubmit = _ref2.onSubmit;
 
     var objectKeys = Object.keys(bioData);
-    var Information = objectKeys.map(function (element, index) {
-        if (_typeof(bioData[element]) === 'object') return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: element, value: bioData[element].value, key: index });
-
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: element, value: bioData[element], key: index });
-    });
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "display-frame" },
@@ -27239,8 +27240,57 @@ var DisplayFrame = function DisplayFrame(_ref2) {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
+                { className: "row" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "col-xs-4 pull-right" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "button",
+                        { className: "button btn-block btn-primary btn-rad", onClick: onSubmit },
+                        "Add Record"
+                    )
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
                 { className: "row-pad-all-3x", style: { marginTop: '20px' } },
-                Information
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Surname", col: 4, value: bioData.surname }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Firstname", col: 4, value: bioData.firstname }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Lastname", col: 4, value: bioData.lastname })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "row pad-all-3x" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Home Address", col: 6, value: bioData.home_address }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Contact Address", col: 6, value: bioData.contact_address })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "row pad-all-3x" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Date of Birth", col: 4, value: bioData.dob }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Gender", col: 4, value: bioData.gender }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Marital Status", col: 4, value: bioData.marital_status })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "row pad-all-3x" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Telephone 1", col: 4, value: bioData.telephone_1 }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Telephone 2", col: 4, value: bioData.telephone_2 }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Profession", col: 4, value: bioData.profession })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "row pad-all-3x" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "State of Origin", col: 4, value: bioData.state_origin }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "State of Birth", col: 4, value: bioData.state_birth }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Maiden name", col: 4, value: bioData.maiden_name })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "row pad-all-3x" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Next of Kin", col: 5, value: bioData.kin_name }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Relationship", col: 3, value: bioData.kin_relationship }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Info, { label: "Kin's Telephone", col: 4, value: bioData.kin_telephone })
             )
         )
     );

@@ -60,9 +60,7 @@
                                 <label for="title">Description</label>
                                 <textarea name="description" id="description"
                                           style="display: block; width: 100%"
-                                          cols="10" rows="10" class="input input-rad input-brd-primary">
-
-                                </textarea>
+                                          cols="10" rows="10" class="input input-rad input-brd-primary"></textarea>
                             </div>
                         </div>
                     </div>

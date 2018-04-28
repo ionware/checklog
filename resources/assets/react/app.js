@@ -60,7 +60,9 @@ class App extends Component {
                     onChange={this.onInputChange}
                     bioData={this.state}
                     onSubmit={this.onFormSubmit} />
-                <DisplayFrame bioData={ this.state } />
+                <DisplayFrame bioData={ this.state }
+                              onSubmit={this.onFormSubmit}
+                />
             </div>
         );
     }

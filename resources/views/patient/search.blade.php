@@ -41,9 +41,10 @@
                                     <td>{{ $patient->fullname }}</td>
                                     <td>{{ $patient->telephone_1 }}</td>
                                     <td>{{ $patient->gender }}</td>
-                                    <td>
+                                    <td class="small-1x">
                                         <a href="/patient/{{ $patient->id }}" class="tb-link"><i class="fa fa-eye"></i>View</a>
                                         <a href="/patient/{{ $patient->id }}/edit" class="tb-link"><i class="fa fa-edit"></i>Edit</a>
+                                        <a href="/patient/{{ $patient->id }}/checkin" class="tb-link"><i class="fa fa-check-square-o"></i>Checkins</a>
                                     </td>
                                 </tr>
                             @endforeach
