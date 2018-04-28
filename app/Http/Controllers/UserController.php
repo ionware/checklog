@@ -11,17 +11,31 @@ class UserController extends Controller
     {
         //
     }
+
+    /**
+     * Shows the dashboard view [Record creation]
+     * @return $this
+     */
     public function index()
     {
         return view('admin.dashboard')
             ->with('user', auth()->user());
     }
 
+    /**
+     * The password update view
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function setting()
     {
         return view('admin.settings');
     }
 
+    /**
+     * Updates the currently signed in user's password
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request)
     {
         $this->validate($request, [
@@ -34,6 +48,11 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * Create new Users Account. Admin account.
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create(Request $request)
     {
         $this->validate($request, [

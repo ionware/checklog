@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class CheckInController extends Controller
 {
+    /**
+     * Show list of checkin the record id has.
+     * @param $id
+     * @return $this
+     */
     public function show($id)
     {
         $patient = Patients::findOrFail((int) $id);
@@ -18,6 +23,12 @@ class CheckInController extends Controller
             ->with('patient', $patient);
     }
 
+    /**
+     * Create new Checkin for the record's id
+     * @param $id
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create($id, Request $request)
     {
         $this->validate($request, [

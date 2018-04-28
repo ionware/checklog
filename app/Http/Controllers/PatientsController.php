@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class PatientsController extends Controller
 {
 
+    /**
+     * Create new Patient's record
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function create(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -34,6 +39,11 @@ class PatientsController extends Controller
         ]);
     }
 
+    /**
+     * Show the details of a patient record
+     * @param $id
+     * @return $this
+     */
     public function show($id)
     {
         $patient = Patients::findOrFail((int) $id);
@@ -41,6 +51,12 @@ class PatientsController extends Controller
         return view('patient.show')->with('patient', $patient);
     }
 
+    /**
+     * Shows the editing form of a particular patient's record
+     *
+     * @param $id
+     * @return $this
+     */
     public function edit($id)
     {
         $patient = Patients::findOrFail((int) $id);
@@ -48,6 +64,13 @@ class PatientsController extends Controller
         return view('patient.edit')->with('patient', $patient);
     }
 
+    /**
+     * Updates a particular patient's record
+     *
+     * @param $id
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update($id, Request $request)
     {
         $patient = Patients::findOrFail((int) $id);
@@ -64,6 +87,12 @@ class PatientsController extends Controller
         return redirect()->route('home');
     }
 
+    /**
+     * Search records of patient's based on their fullname
+     *
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
     public function search(Request $request)
     {
         if (empty($request->fullname))
