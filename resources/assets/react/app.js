@@ -44,11 +44,10 @@ class App extends Component {
         createRecordRequest(data).then((data) => {
             this.cleanState();
             NotificationManager.success(data.message, "Record Added!");
+            this.props.hideLoader();
             },
             (error) => NotificationManager.error("Failed to create patient's record. Some required data are missing", "Record Failed")
         );
-
-        this.props.hideLoader();
     }
 
     render() {
