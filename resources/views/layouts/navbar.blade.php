@@ -13,7 +13,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="admin-navbar">
-            <form class="navbar-form navbar-right" role="search" method="post" action="/record/search">
+            <form class="navbar-form navbar-right" role="search" method="get" action="/patient/search">
                 <div class="form-group">
                     <input type="text" class="form-control custom-search-input"
                            placeholder="Search record by name" name="fullname">

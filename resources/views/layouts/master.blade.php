@@ -5,6 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="X-CSRF" content="{{ csrf_token() }}">
+    <link rel="icon" href="/images/icon.png">
     <!-- Bootstrap minified version -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Font Awesome and Icons CDN -->
@@ -17,6 +18,14 @@
     @yield('header')
 </head>
 <body>
+@if (session()->has('patient.updated'))
+    <div class="alert alert-dismissible edl-alert edl-alert-success">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        <p>{{ session()->get('patient.updated') }}</p>
+    </div>
+@endif
 @yield('body')
 </body>
 </html>

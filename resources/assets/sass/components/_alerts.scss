@@ -1,0 +1,40 @@
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($text-color, 10%);
+  }
+}
+
+
+@mixin alert-helper($bg-color) {
+  @include alert-variant($bg-color, darken($bg-color, 5%), darken($bg-color, 30%));
+}
+.edl-alert {
+  padding: 8px 10px;
+  border-radius: 0;
+  margin: 0;
+
+  .close {
+    position: relative;
+    top: -2px;
+    right: 0;
+    color: #fff;
+  }
+}
+.edl-alert-success {
+  @include alert-helper($alert-success);
+}
+
+.edl-alert-danger {
+  @include alert-helper($alert-danger);
+}
+
+.edl-alert-warning {
+  @include alert-helper($alert-warning);
+}

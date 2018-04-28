@@ -10,11 +10,12 @@
     <div class="container" style="margin-top: 25px;">
 
         <div class="row text-center">
-            @if($patient->imgage_url)
-                <img src="{{ $patient->image_url }}" alt="Patient" class="patient-avater">
+            @if($patient->image_url)
+                <img src="/images/{{ $patient->image_url }}" alt="Patient" class="patient-avater">
             @else
                 <img src="/images/patient.png" alt="Patient" class="patient-avater">
             @endif
+                <a href="/patient/{{$patient->id}}/edit" style="display: block; font-size: 1.1em"><i class="fa fa-edit"></i> Edit Record</a>
         </div>
         <div class="row pad-all-2x">
             <div class="col-xs-offset-3 col-xs-6">

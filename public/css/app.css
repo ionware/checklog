@@ -105,6 +105,16 @@ h6 {
   border-radius: 5px;
 }
 
+.patient-avater-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.tb-link {
+  margin: 0 4px;
+}
+
 .data {
   font-size: 1.1em;
 }
@@ -402,5 +412,60 @@ h6 {
   background-color: #66BFBF;
   border: 1px solid transparent;
   color: #fff;
+}
+
+.edl-alert {
+  padding: 8px 10px;
+  border-radius: 0;
+  margin: 0;
+}
+
+.edl-alert .close {
+  position: relative;
+  top: -2px;
+  right: 0;
+  color: #fff;
+}
+
+.edl-alert-success {
+  background-color: #2ECC71;
+  border-color: #29b765;
+  color: #124f2c;
+}
+
+.edl-alert-success hr {
+  border-top-color: #25a25a;
+}
+
+.edl-alert-success .alert-link {
+  color: #082615;
+}
+
+.edl-alert-danger {
+  background-color: #E74C3C;
+  border-color: #e43725;
+  color: #7b190f;
+}
+
+.edl-alert-danger hr {
+  border-top-color: #d62c1a;
+}
+
+.edl-alert-danger .alert-link {
+  color: #4d100a;
+}
+
+.edl-alert-warning {
+  background-color: #F39C12;
+  border-color: #e08e0b;
+  color: #674105;
+}
+
+.edl-alert-warning hr {
+  border-top-color: #c87f0a;
+}
+
+.edl-alert-warning .alert-link {
+  color: #362203;
 }
 
