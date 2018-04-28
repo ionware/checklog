@@ -15,7 +15,10 @@
             @else
                 <img src="/images/patient.png" alt="Patient" class="patient-avater">
             @endif
-                <a href="/patient/{{$patient->id}}/edit" style="display: block; font-size: 1.1em"><i class="fa fa-edit"></i> Edit Record</a>
+                <span style="display: block; font-size: 1.1em; margin: 6px 0;">
+                    <a href="/patient/{{$patient->id}}/edit" class="tb-link"><i class="fa fa-edit"></i> Edit Record</a>
+                    <a href="/patient/{{$patient->id}}/checkin" class="tb-link"><i class="fa fa-check-square-o"></i> CheckIn</a>
+                </span>
         </div>
         <div class="row pad-all-2x">
             <div class="col-xs-offset-3 col-xs-6">

@@ -21,6 +21,10 @@ Route::group(['middleware' => ["web", "auth"]], function () {
 
     Route::get('/patient/search', 'PatientsController@search');
 
+    Route::get('/patient/{id}/checkin', 'CheckInController@show');
+
+    Route::post('/patient/{id}/checkin', 'CheckInController@create');
+
     Route::get('/patient/{id}', 'PatientsController@show');
 
     Route::get('/patient/{id}/edit', 'PatientsController@edit');

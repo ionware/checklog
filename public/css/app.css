@@ -128,6 +128,35 @@ h6 {
   color: #95A5A5;
 }
 
+.checkin {
+  position: relative;
+  padding: 20px 20px;
+  margin: 8px 0 !important;
+  -webkit-box-shadow: 0 0 3px 3px #FCFEFE;
+          box-shadow: 0 0 3px 3px #FCFEFE;
+}
+
+.checkin img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 15px;
+  left: -40px;
+}
+
+.checkin span.date {
+  font-weight: bold;
+  color: #66BFBF;
+  font-size: .86em;
+}
+
+.checkin h4 {
+  text-transform: uppercase;
+  font-size: .99em;
+  font-weight: bolder;
+}
+
 .pad-all-1x {
   padding: 5px 5px 5px 5px;
 }

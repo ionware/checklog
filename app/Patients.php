@@ -13,4 +13,10 @@ class Patients extends Model
         "fullname",
         "id"
     ];
+
+    // A patient record has many check-ins.
+    public function checkins()
+    {
+        return $this->hasMany('App\Checkin', 'record_id');
+    }
 }
