@@ -20,6 +20,10 @@ class CheckInController extends Controller
 
     public function create($id, Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
         $patient = Patients::findOrFail((int) $id);
         $checkin = new Checkin($request->except(['_token']));
         $checkin->record_id = $patient->id;
