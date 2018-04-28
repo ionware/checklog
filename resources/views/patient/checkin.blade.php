@@ -28,7 +28,10 @@
                             <p>
                                 {{ $checkin->description }}
                             </p>
-                            <span class="date">12:54 24th April, 2018</span>
+                            <span class="date">
+                                {{ $checkin->created_at->hour }}:{{ $checkin->created_at->minute }}
+                                {{ $checkin->created_at->day }}-{{ $checkin->created_at->month }}-{{ $checkin->created_at->year }}
+                            </span>
                         </div>
                     @endforeach
                 @else
