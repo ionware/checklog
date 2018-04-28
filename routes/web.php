@@ -15,7 +15,7 @@ Route::get('/logout', 'AuthServiceProvider@destroy');
 /*
  * Authenticated Administrators' routes
  * */
-Route::group(['middleware' => ["web", "auth"]], function () {
+Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::get('/home', 'UserController@index')->name('home');
 
@@ -28,6 +28,12 @@ Route::group(['middleware' => ["web", "auth"]], function () {
     });
 
     Route::post('/settings/account', 'UserController@create');
+});
+
+/*
+ * Patient Operation Routes
+ * */
+Route::group(['middleware' => ["web", "auth"]], function () {
 
     Route::get('/patient/search', 'PatientsController@search');
 
