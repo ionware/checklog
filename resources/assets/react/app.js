@@ -46,7 +46,9 @@ class App extends Component {
             NotificationManager.success(data.message, "Record Added!");
             this.props.hideLoader();
             },
-            (error) => NotificationManager.error("Failed to create patient's record. Some required data are missing", "Record Failed")
+            (error) => {
+                this.props.hideLoader();
+                NotificationManager.error("Failed to create patient's record. Some required data are missing", "Record Failed") }
         );
     }
 
